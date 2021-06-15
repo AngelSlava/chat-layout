@@ -1,0 +1,17 @@
+.chat {
+  &-wrapper {
+    background: red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &-body {
+    background: white;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 4px;
+  }
+  &-messages {}
+}

@@ -1,0 +1,14 @@
+<div class="chat-wrapper">
+  <div class="chat-header">chat-header</div>
+  <div class="chat-body">
+    <div *ngIf="!loading; else loader" class="chat-messages">
+      <mk-chat-message *ngFor="let message of messages" [message]="message"></mk-chat-message>
+    </div>
+  </div>
+  <div class="chat-footer">chat-footer</div>
+</div>
+
+
+<ng-template #loader>
+<div>Loading...</div>
+</ng-template>

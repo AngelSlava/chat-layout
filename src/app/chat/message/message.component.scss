@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  width: 100%;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  background: #ccc;
+  max-width: 80%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 8px 8px 8px 0;
+  &.my {
+    margin-left: auto;
+    border-radius: 8px 8px 0 8px;
+  }
+  &__photos {
+    &-item {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    .author {
+      margin-right: 16px;
+    }
+    .date {
+      margin-left: auto;
+      font-size: 10px;
+    }
+  }
+  &__text {
+    white-space: pre-line;
+    word-break: break-word;
+  }
+}
