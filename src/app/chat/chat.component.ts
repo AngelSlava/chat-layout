@@ -50,11 +50,11 @@ export class ChatComponent implements OnInit {
       isMy
     }
     if (isImages) {
-      // Object.assign(message, {
-      //   images: [
-      //     { src: `https://loremflickr.com/800/600?c=${id}` }
-      //   ]
-      // })
+      Object.assign(message, {
+        images: [
+          { src: `https://loremflickr.com/800/600?c=${id}` }
+        ]
+      })
     }
     return message
   }
