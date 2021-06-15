@@ -68,7 +68,7 @@ export class ChatComponent implements OnInit {
 
   loadMessages (): Promise<IMessage[]> {
     const content:IMessage[] = []
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 50; i++) {
       const m = this.generateMessage(i)
       content.push(m)
     }
