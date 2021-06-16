@@ -1,6 +1,6 @@
 .img-placeholder {
   display: block;
-  background-color: green;
+  //background-color: green;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -12,6 +12,16 @@
     bottom: 0;
     background-position: center;
     background-size: cover;
+    background: none !important;
+    img {
+      filter: blur(0);
+      max-height: 100%;
+      max-width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   &:after {
     padding-bottom: 60%;

@@ -50,9 +50,12 @@ export class ChatComponent implements OnInit {
       isMy
     }
     if (isImages) {
+      const sizes = [800, 600, 500, 400, 900]
+      const imgHeight = sizes[Math.floor(Math.random()*sizes.length)]
+      const imgWidth = sizes[Math.floor(Math.random()*sizes.length)]
       Object.assign(message, {
         images: [
-          { src: `https://loremflickr.com/800/600?c=${id}` }
+          { src: `https://loremflickr.com/${imgHeight}/${imgWidth}?c=${id}` }
         ]
       })
     }
