@@ -6,27 +6,29 @@
   display: flex;
   flex-direction: column;
   background: #ccc;
-  max-width: 80%;
+  max-width: 400px;
   padding: 8px;
   margin-bottom: 16px;
   border-radius: 8px 8px 8px 0;
-  &.my {
-    margin-left: auto;
-    border-radius: 8px 8px 0 8px;
+  &.full-width {
+    width: 100%;
   }
   &__photos {
     &-item {
       img {
-        max-width: 100%;
+        width: 100%;
       }
     }
   }
   &__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 4px;
+    line-height: 16px;
     .author {
       margin-right: 16px;
+      font-size: 14px;
     }
     .date {
       margin-left: auto;
@@ -36,5 +38,16 @@
   &__text {
     white-space: pre-line;
     word-break: break-word;
+    display: flex;
+    margin-bottom: 4px;
+  }
+  &.my {
+    margin-left: auto;
+    border-radius: 8px 8px 0 8px;
+    .message {
+      &__text {
+        margin-left: auto;
+      }
+    }
   }
 }

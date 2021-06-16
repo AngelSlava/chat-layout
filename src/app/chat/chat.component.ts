@@ -27,7 +27,7 @@ export class ChatComponent implements OnInit {
     this.loading = true
     this.loadMessages().then(result => {
       this.messages = result
-      this.startChat()
+      // this.startChat()
       this.loading = false
     })
   }
