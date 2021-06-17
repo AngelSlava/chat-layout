@@ -17,7 +17,8 @@ export class MessageImageComponent implements OnInit {
   ngOnInit() {
     if (this.image) {
       const { width = 1, height = 1 } = this.image
-      this.paddingSize = Math.ceil(height / width * 100)
+      const paddingSize = Math.floor(height / width * 100)
+      this.paddingSize = paddingSize > 150 ? 150 : paddingSize
     }
   }
 }

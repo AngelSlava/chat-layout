@@ -54,20 +54,32 @@ export class ChatComponent implements OnInit {
       isMy
     }
     if (isImages) {
-      const sizes = [797, 600, 545, 400, 879, 1199, 300, 198]
-      const height = sizes[Math.floor(Math.random()*sizes.length)]
-      const width = sizes[Math.floor(Math.random()*sizes.length)]
-      Object.assign(message, {
-        images: [
-          {
-            location: `https://loremflickr.com/${width}/${height}?c=${id}`,
-            height,
-            width
-          }
-        ]
-      })
+      this.generateImages()
+      const images = this.generateImages()
+      Object.assign(message, { images })
     }
     return message
+  }
+
+  generateImages () {
+    const images = []
+    const count = +(Math.random() * 5).toFixed(0)
+    for (let i = 0; i < count; i++) {
+      const image = this.generateImage(count)
+      images.push(image)
+    }
+    return images
+  }
+
+  generateImage (id: number) {
+    const sizes = [797, 600, 545, 400, 879, 1199, 300, 198]
+    const height = sizes[Math.floor(Math.random()*sizes.length)]
+    const width = sizes[Math.floor(Math.random()*sizes.length)]
+    return {
+      location: `https://loremflickr.com/${width}/${height}?c=${id}`,
+      height,
+      width
+    }
   }
 
   startChat () {

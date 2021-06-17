@@ -1,9 +1,6 @@
 <div class="img-placeholder" [ngStyle]="{ paddingBottom: paddingSize + '%' }">
   <div class="pre-loader"><span>Loading...</span></div>
-  <div
-    *ngIf="isRendered"
-    class="img-placeholder__image"
-  >
+  <div *ngIf="isRendered" class="img-placeholder__image">
     <img [src]="image?.location">
   </div>
 </div>

@@ -8,7 +8,8 @@
   &-body {
     background: white;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     display: flex;
     flex-direction: column-reverse;
     padding: 0 4px;
