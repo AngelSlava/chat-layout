@@ -1,37 +1,30 @@
 .img-placeholder {
-  display: block;
-  //background-color: green;
-  background-position: center;
-  background-size: cover;
   position: relative;
+  width: 304px;
+  padding-bottom: 60%;
   &__image {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     background-position: center;
     background-size: cover;
-    background: none !important;
-    img {
-      filter: blur(0);
-      max-height: 100%;
-      max-width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .pre-loader {
+    position: absolute;
+    z-index: 0;
+    background: green;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    span {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
     }
-  }
-  &:after {
-    padding-bottom: 60%;
-    content: '';
-    display: block;
-  }
-  .empty {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
 }

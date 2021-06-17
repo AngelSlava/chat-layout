@@ -1,4 +1,4 @@
-<div class="message" [class.my]="message?.isMy" [class.full-width]="message?.images?.length">
+<div class="message" [class.my]="message?.isMy">
   <div #itemElement></div>
   <div class="message__header">
     <div *ngIf="!message?.isMy" class="author">
@@ -11,7 +11,7 @@
   <div class="message__text">{{ message?.message }}</div>
   <div *ngIf="message?.images?.length" class="message__photos">
     <div *ngFor="let image of message?.images" class="message__photos-item">
-      <message-image [src]="image.src" [isRendered]="alreadyRendered"></message-image>
+      <message-image [image]="image" [isRendered]="alreadyRendered"></message-image>
     </div>
   </div>
 </div>

@@ -6,9 +6,13 @@ export interface IMessage {
   isMy?: boolean,
   unread: boolean,
   message: string,
-  images?: [{
-    src: string
-  }]
+  images?: IImage[]
+}
+
+export interface IImage {
+  location: string
+  height?: number
+  width?: number
 }
 
 @Component({
@@ -50,12 +54,16 @@ export class ChatComponent implements OnInit {
       isMy
     }
     if (isImages) {
-      const sizes = [800, 600, 500, 400, 900]
-      const imgHeight = sizes[Math.floor(Math.random()*sizes.length)]
-      const imgWidth = sizes[Math.floor(Math.random()*sizes.length)]
+      const sizes = [797, 600, 545, 400, 879, 1199, 300, 198]
+      const height = sizes[Math.floor(Math.random()*sizes.length)]
+      const width = sizes[Math.floor(Math.random()*sizes.length)]
       Object.assign(message, {
         images: [
-          { src: `https://loremflickr.com/${imgHeight}/${imgWidth}?c=${id}` }
+          {
+            location: `https://loremflickr.com/${width}/${height}?c=${id}`,
+            height,
+            width
+          }
         ]
       })
     }
