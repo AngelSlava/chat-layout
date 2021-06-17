@@ -3,7 +3,8 @@
   <div
     *ngIf="isRendered"
     class="img-placeholder__image"
-    [ngStyle]="{ backgroundImage: 'url('+ image?.location +')'}"
-  ></div>
+  >
+    <img [src]="image?.location">
+  </div>
 </div>
 
